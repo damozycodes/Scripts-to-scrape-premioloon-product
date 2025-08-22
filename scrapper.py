@@ -84,7 +84,7 @@ def main():
     for url in product_urls:
         product_data = scrape_premioloon_product(driver, url)
         if product_data and product_data["Name"]:  # only add if product name exists
-            # product_data["Scrape Date"] = datetime.now().strftime("%Y-%m-%d")
+            product_data["Scrape Date"] = datetime.now().strftime("%Y-%m-%d")
             results.append(product_data)
 
     driver.quit()
@@ -100,4 +100,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-x
